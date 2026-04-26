@@ -95,6 +95,7 @@ int main(int argc, char* argv[]) {
 
     double elapsed = std::chrono::duration<double>(t1 - t0).count();
 
+    bool sorted = is_sorted(A);
     print_output(alg, n, UNDEFINED_PARAM, threshold, n_threads, is_sorted(A), elapsed);
-    return 0;
+    return sorted ? 0 : 1;
 }

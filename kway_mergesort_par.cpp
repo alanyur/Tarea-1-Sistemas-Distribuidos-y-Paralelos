@@ -132,7 +132,7 @@ int main(int argc, char* argv[])
     auto t1 = std::chrono::high_resolution_clock::now();
 
     double elapsed = std::chrono::duration<double>(t1 - t0).count();
+    bool sorted = is_sorted(A);
     print_output(alg, n, k, threshold, n_threads, is_sorted(A), elapsed);
-
-    return 0;
+    return sorted ? 0 : 1;
 }
