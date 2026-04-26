@@ -108,7 +108,7 @@ int main(int argc, char* argv[])
     int k         = (argc > 2) ? std::stoi(argv[2]) : 4;
     int threshold = (argc > 3) ? std::stoi(argv[3]) : 1024;
     std::string alg = "k_secuencial";
-    std::cout << alg << " n=" << n
+    std::cerr << alg << " n=" << n
               << " k=" << k << " threshold=" << threshold << "\n";
 
     auto A = generate_random(n);

@@ -200,7 +200,7 @@ int main(int argc, char* argv[])
     int threshold = (argc > 3) ? std::stoi(argv[3]) : 4096;
     std::string alg = "k-way_full";
     int n_threads = omp_get_max_threads();
-    std::cout << alg << " n=" << n
+    std::cerr << alg << " n=" << n
               << " k=" << k << " threshold=" << threshold
               << " threads=" << n_threads << "\n";
 

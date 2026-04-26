@@ -223,7 +223,7 @@ int main(int argc, char* argv[])
     std::string alg = "k-way_ranks";
     int n_threads = omp_get_max_threads();
 
-    std::cout << alg << " n=" << n
+    std::cerr << alg << " n=" << n
               << " k=" << k << " threshold=" << threshold
               << " threads=" << n_threads << "\n";
 
