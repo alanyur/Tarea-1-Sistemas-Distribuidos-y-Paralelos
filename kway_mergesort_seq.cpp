@@ -107,7 +107,7 @@ int main(int argc, char* argv[])
     int n         = (argc > 1) ? std::stoi(argv[1]) : (1 << 20);
     int k         = (argc > 2) ? std::stoi(argv[2]) : 4;
     int threshold = (argc > 3) ? std::stoi(argv[3]) : 1024;
-    std::string alg = "k_secuencial";
+    std::string alg = "k-way_seq";
     std::cerr << alg << " n=" << n
               << " k=" << k << " threshold=" << threshold << "\n";
 

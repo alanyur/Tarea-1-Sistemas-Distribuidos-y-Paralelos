@@ -73,7 +73,7 @@ int main(int argc, char* argv[]) {
     int n = (argc > 1) ? std::stoi(argv[1]) : (1 << 20);
     //int k         = (argc > 2) ? std::stoi(argv[2]) : 4; No aplica 
     int threshold = (argc > 3) ? std::stoi(argv[3]) : (1 << 10);
-    std::string alg = "paralelo";
+    std::string alg = "mergesort_par";
     int n_threads = omp_get_max_threads();
 
     std::cerr << alg << " n=" << n
