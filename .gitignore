@@ -1,3 +1,11 @@
 .vscode
 .vscode/*
-
+.venv
+.venv/*
+bin/
+mergesort_seq
+mergesort_par
+kway_seq
+kway_par
+kway_ranks
+kway_full
