@@ -85,7 +85,7 @@ int main(int argc, char* argv[])
     auto t1 = std::chrono::high_resolution_clock::now();
     double elapsed = std::chrono::duration<double>(t1 - t0).count();
     
-    print_output(alg, n, UNDEFINED_PARAM, threshold, 1, is_valid(A), elapsed);
+    print_output(alg, n, UNDEFINED_PARAM, threshold, 1, is_sorted(A), elapsed);
     return 0;
 }
 
