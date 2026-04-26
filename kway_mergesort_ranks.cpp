@@ -29,6 +29,7 @@
 #include <climits>
 #include <cstring>
 #include <omp.h>
+#include "output_helper.hpp"
 
 struct HeapNode {
     int value;
@@ -219,10 +220,12 @@ int main(int argc, char* argv[])
     int n         = (argc > 1) ? std::stoi(argv[1]) : (1 << 20);
     int k         = (argc > 2) ? std::stoi(argv[2]) : 4;
     int threshold = (argc > 3) ? std::stoi(argv[3]) : 4096;
+    std::string alg = "k-way_ranks";
+    int n_threads = omp_get_max_threads();
 
-    std::cout << "[k-way MergeSort Ranks] n=" << n
+    std::cout << alg << " n=" << n
               << " k=" << k << " threshold=" << threshold
-              << " threads=" << omp_get_max_threads() << "\n";
+              << " threads=" << n_threads << "\n";
 
     auto A = generate_random(n);
     std::vector<int> tmp(n);
@@ -236,8 +239,7 @@ int main(int argc, char* argv[])
     auto t1 = std::chrono::high_resolution_clock::now();
 
     double elapsed = std::chrono::duration<double>(t1 - t0).count();
-    std::cout << "Tiempo:       " << elapsed << " s\n";
-    std::cout << "Verificacion: " << (is_sorted(A) ? "OK" : "FALLO") << "\n";
+    print_output(alg, n, k, threshold, n_threads, is_sorted(A), elapsed);
 
     return 0;
 }

@@ -6,6 +6,7 @@
 #include <chrono>
 #include <iostream>
 #include <algorithm>
+#include "output_helper.hpp"
 
 void merge(std::vector<int>& arr, std::vector<int>& temp, int left, int mid, int right)
 {
@@ -67,12 +68,13 @@ bool is_sorted(const std::vector<int>& v) {
     return true;
 }
 
+
 int main(int argc, char* argv[])
 {
     int n         = (argc > 1) ? std::stoi(argv[1]) : (1 << 20);
     int threshold = (argc > 2) ? std::stoi(argv[2]) : (1 << 10);
-
-    std::cout << "[MergeSort Secuencial] n=" << n 
+    std::string alg = "secuencial";
+    std::cout << alg << " n=" << n 
             << " threshold=" << threshold << std::endl;
 
     auto A = generate_random(n);
@@ -81,11 +83,9 @@ int main(int argc, char* argv[])
     auto t0 = std::chrono::high_resolution_clock::now();
     mergesort_secuencial(A, tmp, 0, n, threshold);
     auto t1 = std::chrono::high_resolution_clock::now();
-
     double elapsed = std::chrono::duration<double>(t1 - t0).count();
-    std::cout << "Tiempo:      " << elapsed << " s\n";
-    std::cout << "Verificacion: " << (is_sorted(A) ? "OK" : "FALLO") << "\n";
-
+    
+    print_output(alg, n, UNDEFINED_PARAM, threshold, 1, is_valid(A), elapsed);
     return 0;
 }
 
