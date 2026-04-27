@@ -173,7 +173,7 @@ Nosotros, Javier Cadagán, Alan Ibacache, Mariel Muñoz declaramos que hemos uti
 
 [] Generación de Ideas: Uso de la IA como fuente de inspiración o para explorar enfoques novedosos en el desarrollo del trabajo. Siempre que se han utilizado ideas específicas provenientes de la IA, se ha citado adecuadamente su origen.
 
-[✅] Asesoría Técnica o Conceptual: Consulta sobre conceptos técnicos o metodológicos complejos. La información proporcionada por la IA ha sido revisada, contrastada y validada con fuentes académicas o científicas adecuadas para asegurar su precisión y pertinencia. (Debugging, Compilación)
+[✅] Asesoría Técnica o Conceptual: Consulta sobre conceptos técnicos o metodológicos complejos. La información proporcionada por la IA ha sido revisada, contrastada y validada con fuentes académicas o científicas adecuadas para asegurar su precisión y pertinencia. (Debugging, Compilación, Graficos)
 
 [] Otros usos: _____________________________________________________________________________________
 
