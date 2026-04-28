@@ -1,0 +1,16 @@
+# started on Mon Apr 27 20:57:33 2026
+
+
+ Performance counter stats for './kway_seq 67108864 8 1024':
+
+    47.510.826.944      cycles                                                                
+    77.440.084.958      instructions                     #    1,63  insn per cycle            
+       261.353.462      cache-references                                                      
+        20.354.663      cache-misses                     #    7,79% of all cache refs         
+
+      11,951642180 seconds time elapsed
+
+      11,717591000 seconds user
+       0,200061000 seconds sys
+
+

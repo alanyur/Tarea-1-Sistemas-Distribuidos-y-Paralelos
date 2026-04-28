@@ -1,0 +1,16 @@
+# started on Mon Apr 27 20:59:35 2026
+
+
+ Performance counter stats for './kway_full 67108864 8 1024':
+
+    56.189.834.621      cycles                                                                
+    88.049.880.377      instructions                     #    1,57  insn per cycle            
+       339.704.908      cache-references                                                      
+        37.198.900      cache-misses                     #   10,95% of all cache refs         
+
+       4,771572391 seconds time elapsed
+
+      13,866327000 seconds user
+       0,254816000 seconds sys
+
+
