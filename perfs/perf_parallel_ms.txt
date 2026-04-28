@@ -1,0 +1,16 @@
+# started on Mon Apr 27 20:58:59 2026
+
+
+ Performance counter stats for './mergesort_par 67108864 -1 1024':
+
+    33.632.696.427      cycles                                                                
+    27.554.362.632      instructions                     #    0,82  insn per cycle            
+       554.277.939      cache-references                                                      
+        40.927.404      cache-misses                     #    7,38% of all cache refs         
+
+       2,921973631 seconds time elapsed
+
+       8,154264000 seconds user
+       0,295451000 seconds sys
+
+

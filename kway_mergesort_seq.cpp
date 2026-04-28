@@ -107,8 +107,8 @@ int main(int argc, char* argv[])
     int n         = (argc > 1) ? std::stoi(argv[1]) : (1 << 20);
     int k         = (argc > 2) ? std::stoi(argv[2]) : 4;
     int threshold = (argc > 3) ? std::stoi(argv[3]) : 1024;
-    std::string alg = "k_secuencial";
-    std::cout << alg << " n=" << n
+    std::string alg = "k-way_seq";
+    std::cerr << alg << " n=" << n
               << " k=" << k << " threshold=" << threshold << "\n";
 
     auto A = generate_random(n);
@@ -119,8 +119,8 @@ int main(int argc, char* argv[])
     auto t1 = std::chrono::high_resolution_clock::now();
 
     double elapsed = std::chrono::duration<double>(t1 - t0).count();
+
+    bool sorted = is_sorted(A);
     print_output(alg, n, k, threshold, UNDEFINED_PARAM, is_sorted(A), elapsed);
-
-
-    return 0;
+    return sorted ? 0 : 1;
 }
